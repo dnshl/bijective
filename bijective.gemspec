@@ -1,6 +1,10 @@
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require 'bijective/version'
+
 Gem::Specification.new do |s|
   s.name        = 'bijective'
-  s.version     = '0.0.0'
+  s.version     = Bijective::VERSION
   s.date        = '2013-07-05'
   s.summary     = "Bijective"
   s.description = "Bijective"
