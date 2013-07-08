@@ -4,8 +4,7 @@ module Bijective
       upcase_letters   = ('A'..'Z').to_a
       downcase_letters = ('a'..'z').to_a
       numbers          = (0..9).to_a
-
-      alphabet = (upcase_letters + downcase_letters + numbers).shuffle.join
+      (upcase_letters + downcase_letters + numbers).shuffle.join
     end
   end
 end
