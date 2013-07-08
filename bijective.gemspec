@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.description = "Bijective"
   s.authors     = ["Dennis Hall"]
   s.email       = 'dennis@dennishall.de'
-  s.files       = ["lib/bijective.rb"]
   s.homepage    = 'http://rubygems.org/gems/bijective'
 
   s.files         = `git ls-files`.split("\n")
