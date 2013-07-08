@@ -1,3 +1,6 @@
+require 'bijective/generator'
+require 'bijective/initialization_error'
+
 module Bijective
   class Instance
     def initialize alphabet

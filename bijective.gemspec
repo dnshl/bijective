@@ -8,4 +8,9 @@ Gem::Specification.new do |s|
   s.email       = 'dennis@dennishall.de'
   s.files       = ["lib/bijective.rb"]
   s.homepage    = 'http://rubygems.org/gems/bijective'
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
 end
