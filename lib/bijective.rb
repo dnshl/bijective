@@ -1,13 +1,5 @@
 module Bijective
-  class Bijective
-    def self.generate_alphabet
-      upcase_letters   = ('A'..'Z').to_a
-      downcase_letters = ('a'..'z').to_a
-      numbers          = (0..9).to_a
-
-      alphabet = (upcase_letters + downcase_letters + numbers).shuffle.join
-    end
-
+  class Instance
     def initialize alphabet
       dublicate = alphabet.split(//).uniq.join
 
@@ -36,8 +28,5 @@ module Bijective
       s.each_char { |c| i = i * @base + @alphabet.index(c) }
       i
     end
-  end
-
-  class InitializationError < Exception
   end
 end
