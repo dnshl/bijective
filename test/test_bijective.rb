@@ -2,11 +2,17 @@ require File.expand_path('../helper', __FILE__)
 
 class BijectiveTest < Test::Unit::TestCase
   def test_generate_alphabet
-    alphabet = Bijective.generate_alphabet
+    alphabet = Bijective::Bijective.generate_alphabet
     assert_equal(62, alphabet.split(//).uniq.join.length)
 
-    alphabet2 = Bijective.generate_alphabet
+    alphabet2 = Bijective::Bijective.generate_alphabet
     assert_not_equal(alphabet, alphabet2)
+  end
+
+  def test_initialization_error
+    assert_raise Bijective::InitializationError do
+      bijective = Bijective::Bijective.new('jjjjj')
+    end
   end
 
   def test_encode
@@ -33,6 +39,6 @@ private
 
   def set_alphabet
     alphabet = '713z6iE2lKokr5TLpHvwtQ9mZRJWcNbduBnqeCUfxDYGSXPVhj4asFyIgM8A0O'
-    @bijective = Bijective.new(alphabet)
+    @bijective = Bijective::Bijective.new(alphabet)
   end
 end
