@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = 'bijective'
   s.version     = Bijective::VERSION
   s.date        = '2013-07-05'
-  s.summary     = "Bijective"
-  s.description = "Bijective"
+  s.summary     = "bijective decodes and encoes via a generated character sequence"
+  s.description = "bijective can be used to decode strings and encode numbers"
   s.authors     = ["Dennis Hall"]
   s.email       = 'dennis@dennishall.de'
   s.homepage    = 'http://rubygems.org/gems/bijective'
