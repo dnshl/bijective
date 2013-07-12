@@ -1,7 +1,7 @@
 # bijective
 
 ## Install
-  gem install bijective
+	gem install bijective
 
 ## Usage
 - Require the gem
