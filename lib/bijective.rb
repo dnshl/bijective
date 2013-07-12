@@ -16,7 +16,7 @@ module Bijective
 
     # returns string
     def encode i
-      return @sequence[0] if i == 0
+      return @sequence[0,1] if i == 0
       s = ''
       while i > 0
         s << @sequence[i.modulo(@base)]
