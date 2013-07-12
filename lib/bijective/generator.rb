@@ -1,6 +1,6 @@
 module Bijective
   class Generator
-    def self.generate_alphabet
+    def self.generate_sequence
       upcase_letters   = ('A'..'Z').to_a
       downcase_letters = ('a'..'z').to_a
       numbers          = (0..9).to_a

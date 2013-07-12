@@ -3,23 +3,23 @@ require 'bijective/initialization_error'
 
 module Bijective
   class Instance
-    def initialize alphabet
-      dublicate = alphabet.split(//).uniq.join
+    def initialize sequence
+      dublicate = sequence.split(//).uniq.join
 
-      if dublicate.length != alphabet.length
-        raise(InitializationError, 'Alphabet string must contain only unique charaters.')
+      if dublicate.length != sequence.length
+        raise(InitializationError, 'Sequence string must contain only unique charaters.')
       end
 
-      @alphabet = alphabet
-      @base = @alphabet.length
+      @sequence = sequence
+      @base = @sequence.length
     end
 
     # returns string
     def encode i
-      return @alphabet[0] if i == 0
+      return @sequence[0] if i == 0
       s = ''
       while i > 0
-        s << @alphabet[i.modulo(@base)]
+        s << @sequence[i.modulo(@base)]
         i /= @base
       end
       s.reverse
@@ -28,7 +28,7 @@ module Bijective
     # returns integer
     def decode s
       i = 0
-      s.each_char { |c| i = i * @base + @alphabet.index(c) }
+      s.each_char { |c| i = i * @base + @sequence.index(c) }
       i
     end
   end

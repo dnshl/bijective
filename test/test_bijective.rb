@@ -2,7 +2,7 @@ require File.expand_path('../helper', __FILE__)
 
 class BijectiveTest < Test::Unit::TestCase
   def test_encode
-    set_alphabet
+    set_sequence
     h = { '7'   => 0,
           'o'   => 10,
           '1U'  => 100,
@@ -13,7 +13,7 @@ class BijectiveTest < Test::Unit::TestCase
   end
 
   def test_decode
-    set_alphabet
+    set_sequence
     h = { 0      => '7',
           10     => 'o',
           100    => '1U',
@@ -25,8 +25,8 @@ class BijectiveTest < Test::Unit::TestCase
 
 private
 
-  def set_alphabet
-    alphabet = '713z6iE2lKokr5TLpHvwtQ9mZRJWcNbduBnqeCUfxDYGSXPVhj4asFyIgM8A0O'
-    @bijective = Bijective::Instance.new(alphabet)
+  def set_sequence
+    sequence = '713z6iE2lKokr5TLpHvwtQ9mZRJWcNbduBnqeCUfxDYGSXPVhj4asFyIgM8A0O'
+    @bijective = Bijective::Instance.new(sequence)
   end
 end
