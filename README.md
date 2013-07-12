@@ -1,4 +1,4 @@
-# bijective
+# bijective [![Build Status](https://travis-ci.org/dnshl/bijective.png)](https://travis-ci.org/dnshl/bijective)
 
 ## Install
 	gem install bijective
