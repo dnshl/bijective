@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = "bijective can be used to decode strings and encode numbers"
   s.authors     = ["Dennis Hall"]
   s.email       = 'dennis@dennishall.de'
-  s.homepage    = 'http://rubygems.org/gems/bijective'
+  s.homepage    = 'https://github.com/dnshl/bijective'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
